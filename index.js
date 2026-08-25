@@ -65,4 +65,11 @@ io.on('connection', (socket) => {
   });
 });
 
-server.listen(3001, () => console.log('🚀 Servidor rodando na 3001 com WebRTC!'));
+// ==========================================
+// CONFIGURAÇÃO DA PORTA PARA O RENDER
+// ==========================================
+const PORT = process.env.PORT || 3001;
+
+server.listen(PORT, () => {
+  console.log(`🚀 Servidor rodando na porta ${PORT} com WebRTC!`);
+});
