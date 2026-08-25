@@ -105,6 +105,7 @@ io.on('connection', (socket) => {
 
   // Sinalização WebRTC para Voz e Compartilhamento de Tela
   socket.on('entrar_voz', () => {
+    // Avisa os outros que um novo usuário entrou na chamada
     socket.broadcast.emit('usuario_entrou_voz', socket.id);
   });
 
